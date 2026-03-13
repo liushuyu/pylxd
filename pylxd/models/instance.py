@@ -395,7 +395,7 @@ class Instance(model.Model):
             if instance_name is None:
                 # LXD may assign a name if not provided, so we need to get it from the metadata.
                 instance_name = os.path.basename(
-                    response_json["metadata"]["resources"]["instances"][0]
+                    response_json["metadata"]["metadata"]["entity_url"]
                 )
 
             if wait:
